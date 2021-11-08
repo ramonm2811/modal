@@ -20,6 +20,11 @@ function showModal() {
   }
   document.querySelector('.close-modal').addEventListener('click', closeModal);
   document.querySelector('.overlay').addEventListener('click', closeModal);
+  document.addEventListener('keydown', function (e) {
+    if (e.which === 27) {
+      closeModal();
+    }
+  });
 }
 
 function closeModal() {
